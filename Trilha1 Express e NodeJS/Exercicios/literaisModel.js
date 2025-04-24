@@ -24,3 +24,12 @@ const fruit = 'maçã',
 const output = tagFunction`Temos ${num} de ${fruit}. empolgante!!`;
 
 console.log(output);
+
+// Uma propriedade especial chamada raw está disponível para o primeiro argumento de um modelo marcado.
+// Essa propriedade retorna um array que contém as versões brutas, sem escape, de cada parte do literal do modelo dividido.
+
+function tagFunc(strings) {
+  console.log(strings.raw[0]);
+}
+
+tagFunc`Esta é a linha 1. \n Esta é a linha 2.`;
